@@ -10,7 +10,7 @@ void IdleStateGun::Update(Gun* _gun, float _deltaTime)
 
 }
 
-bool IdleStateGun::CanTransitionFrom(Gun* _gun, State _currentState)
+bool IdleStateGun::CanTransitionFrom(Gun* _gun, int _currentStateIndex)
 {
 	return true;
 }

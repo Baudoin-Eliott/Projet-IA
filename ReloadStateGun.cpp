@@ -31,7 +31,7 @@ void ReloadStateGun::Update(Gun* _gun, float _deltaTime)
 	}
 }
 
-bool ReloadStateGun::CanTransitionFrom(Gun* _gun, State _currentState)
+bool ReloadStateGun::CanTransitionFrom(Gun* _gun, int _currentState)
 {
-	return (_gun->CanReload() && _currentState == State::Idle);
+	return (_gun->CanReload() && _currentState == 0);
 }

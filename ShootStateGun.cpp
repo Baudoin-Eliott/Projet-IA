@@ -34,7 +34,7 @@ void ShootStateGun::Update(Gun* _gun, float _deltaTime)
 	}
 }
 
-bool ShootStateGun::CanTransitionFrom(Gun* _gun, State _currentState)
+bool ShootStateGun::CanTransitionFrom(Gun* _gun, int _currentStateIndex)
 {
-	return (_gun->CanShoot() && _currentState == State::Idle);
+	return (_gun->CanShoot() && _currentStateIndex == 0);
 }

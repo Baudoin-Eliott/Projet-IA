@@ -26,12 +26,12 @@ int main() {
                 int key = _getch();
                 switch (key) {
                 case(114):
-                    if (gun.GetStates()[(int)State::Reloading]->CanTransitionFrom(&gun, gun.GetCurrentState()))
+                    if (gun.GetStates()[(int)State::Reloading]->CanTransitionFrom(&gun, (int)gun.GetCurrentState()))
                         if(gun.CanReload())
                             gun.SetState(State::Reloading);
                     break;
                 case(115):
-                    if (gun.GetStates()[(int)State::Shooting]->CanTransitionFrom(&gun, gun.GetCurrentState()))
+                    if (gun.GetStates()[(int)State::Shooting]->CanTransitionFrom(&gun, (int)gun.GetCurrentState()))
 						if (gun.CanShoot())
                             gun.SetState(State::Shooting);
                     break;
